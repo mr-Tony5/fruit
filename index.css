@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+body{
+    background-color: #fff;
+}
+section{
+    padding: 80px 70px;
+}
+header{
+    border-top: 20px solid #0c0ccd;
+    padding: 10px 30px;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .container div img{
+    height: 30px;
+    width: 80px;
+}
+header .container div a{
+    padding: 0px 7px;
+    text-decoration: none;
+}
+header .container .fa-bars{
+    display: none;
+}
+header .container div a:hover{
+    background-color: #0c0ccd;
+    color: white;
+    border-radius: 10px;
+    
+}
+
+/* home styling */
+.home{
+    background-color: #0c0ccd;
+}
+.home .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.home .container .home-img img{
+    height: 400px;
+    width: 300px;
+}
+
+/* blog style */
+
+.blog{
+    background-color: rgb(74, 5, 5);
+}
+.blog .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.blog .container .box img{
+    width: 100%;
+}
+input{
+    margin-bottom: 100px;
+}
+
+
+@media (max-width: 788px) {
+    .home .container{
+        flex-flow: column;
+    }
+    section{
+        padding: 80px 20px 20px 20px;
+    }
+}
+@media (max-width: 566px) {
+    header .container .fa-bars{
+        display: inline-block;
+    }
+    header .container .nav{
+        position: absolute;
+        width: 100%;
+        background-color: #fff;  
+        top: 50px;
+        left: 0; 
+        display: none;  
+    }
+    header .container .nav.active{
+        display: inline-block;
+    }
+
+    .home .container .home-img img{
+        height: 400px;
+        width: px;
+    }
+    
+
+    header .container .nav a{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10PX;
+        border-bottom: 1px solid blue;
+    }
+}
+@media (max-width: 355px) {
+    .home .container .home-img img{
+        height: 400px;
+        width: 200px;
+    }
+}
+
+
+
